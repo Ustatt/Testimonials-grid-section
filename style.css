@@ -4,21 +4,22 @@
 }
 
 body {
-    margin: 0;
-    padding: 0rem;
     display: flex;
     justify-content: center;
     align-items: center;
     min-height: 100vh;
+    padding: 10rem;
     background-color: hsl(214, 17%, 92%);
+    font-size: 13px;
+    font-family: 'Barlow Semi Condensed', sans-serif;
 }
 
 .layout {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
     grid-auto-rows: 1fr;
-    gap: 2rem 2rem;
-    margin: 10rem;
+    gap: 2rem;
+
 }
 
 .layout div {
@@ -27,9 +28,8 @@ body {
     width: 100%;
     height: 100%;
     border-radius: 0.5rem;
-    padding: 1rem;
+
     box-sizing: border-box;
-    justify-items: flex-start;
     gap: 0;
 
 
@@ -73,8 +73,8 @@ body {
 .layout div .prof {
     display: flex;
     flex-direction: row;
-    padding-bottom: 0rem;
     align-items: center;
+    position: relative;
 }
 
 .det {
@@ -86,9 +86,61 @@ body {
     border-radius: 100%;
     height: 30px;
     width: 30px;
+    align-self: flex-start;
+    margin-right: 1rem;
 }
 
-h4,
-p {
-    margin: 0;
+.layout>div {
+    padding: 2rem;
+    display: flex;
+    flex-direction: column;
+    gap: 0rem;
+
+}
+
+#para {
+    font-weight: 600;
+    font-size: 1.1rem;
+}
+
+.pura {
+    line-height: 1.1rem;
+}
+
+.pura:not(.jean .pura) {
+    padding-top: 16px;
+}
+
+.kira .prof {
+    padding-bottom: 1rem;
+}
+
+.name {
+    padding-bottom: 3px;
+    font-size: 0.9rem;
+}
+
+
+
+.daniel {
+    background-image: url('images/bg-pattern-quotation.svg');
+    background-repeat: no-repeat;
+    background-position: top 0.5rem right 4rem;
+    background-size: 7rem 7rem;
+
+}
+
+@media (max-width:1000px) {
+    .layout {
+        display: flex;
+        flex-direction: column;
+    }
+
+    body {
+        padding: 2rem;
+    }
+
+    .ver:not(.kira .ver) {
+        padding-bottom: 12px;
+    }
 }
